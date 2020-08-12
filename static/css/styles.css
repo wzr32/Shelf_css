@@ -4,23 +4,36 @@
     box-sizing: border-box;
 }
 
+.small {
+    max-width: 17em;
+}
+
+.medium {
+    max-width: 28em;
+}
+
+.large {
+    max-width: 44em;
+}
+
 .shelf {
-    margin: 2em;
-    max-width: 25em;
+    position: relative;
+    margin: 0 1em 1em 1em 
 }
 
 .shelf .shelf__row {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 .5em .5em .5em;
+    margin: 0 .5em .1em .5em;
     overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 .shelf .shelf__row{
     -ms-overflow-style: none;
     scrollbar-width: none;
-}
+} 
 
 .shelf .shelf__row::-webkit-scrollbar {
     display: none;
@@ -28,19 +41,34 @@
 
 .shelf .shelf__row .row-wall{
     width: 94%;
-    height: 3em;
+    height: 4em;
     background: rgb(171,171,171);
     background: linear-gradient(180deg, rgba(171,171,171,1) 0%, rgba(235,235,235,1) 60%);
     display: grid;
-    grid-template-columns: repeat(5, 4em);
+    grid-template-columns: repeat( auto-fit, minmax(4em, 1fr));
+    gap: 1em;
+}
+
+.shelf .shelf__row .row-wall::before {
+    content: "";
+    position: absolute;
+    border: 1px solid black;
+    background-color: #d8d8d8;
+    height: 1em;
+    left: .5em;
+    right: .5em;
+    z-index: 1000;
+    transform: translateY(4.9em);
 }
 
 .shelf .shelf__row .row-wall .product{
-    max-width: 4em;
+    max-width: 5.3em;
     position: relative;
-    top: 10%;
+    top: 1%;
     z-index: 50;
-    transform: perspective(10em) translateZ(2em);
+    -webkit-box-shadow: 0px 37px 16px -28px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 37px 16px -28px rgba(0,0,0,0.75);
+    box-shadow: 0px 37px 16px -28px rgba(0,0,0,0.75);
 }
 
 .shelf .shelf__row .row-base{
@@ -50,17 +78,4 @@
     transform: perspective(20px) rotateX(5deg);
     position: relative;
     z-index: -100;
-}
-
-.shelf .shelf__row .row-base::before {
-    content: "";
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    height: .4em;
-    background-color: #fff;
-    -webkit-box-shadow: 0px 4px 11px 2px rgba(214,214,214,1);
-    -moz-box-shadow: 0px 4px 11px 2px rgba(214,214,214,1);
-    box-shadow: 0px 4px 11px 2px rgba(214,214,214,1);
-    transform: perspective(106px) rotateX(150deg);
 }
