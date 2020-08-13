@@ -54,13 +54,15 @@
 .shelf .shelf__row .row-wall::before {
     content: "";
     position: absolute;
-    border: 1px solid black;
     background-color: #a0a0a0;
     height: .6em;
     left: -3%;
     right: -3%;
-    top: 112%;
+    top: 114%;
     z-index: 1000;
+    -webkit-box-shadow: 0px 8px 21px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 8px 21px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 8px 21px 1px rgba(0,0,0,0.75);
 }
 
 .shelf .shelf__row .row-wall .product{
