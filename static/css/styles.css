@@ -189,6 +189,10 @@
     box-shadow: 0px 37px 16px -28px rgba(0,0,0,0.75);
 }
 
+.shelf .shelf__row .row-wall .product_2 input {
+    display: none;
+}
+
 .shelf .shelf__row .row-wall .product_2 input:checked ~ .modal{
     display: block;
 }
