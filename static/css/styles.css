@@ -69,7 +69,7 @@
     align-items: center;
     width: .9em;
     height: 101%;
-    z-index: 1000;
+    z-index: 1;
     background: #ADA996;
     background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
     background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
@@ -77,6 +77,14 @@
 .shelf .shelf__row .row-wall::before {
     right: 0;
 }
+
+
+
+
+
+
+
+
 .shelf .shelf__row .row-wall .product{
     /* display: none; */
     max-width: 9.3em;
@@ -89,6 +97,150 @@
     margin-right: 10px;
     cursor: pointer;
 }
+
+.shelf .shelf__row .row-wall .product img {
+    object-fit: cover;
+    max-width: 9.3em;
+    -webkit-box-shadow: 0px 37px 16px -28px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 37px 16px -28px rgba(0,0,0,0.75);
+    box-shadow: 0px 37px 16px -28px rgba(0,0,0,0.75);
+}
+
+.shelf .shelf__row .row-wall .product:active::before{
+    display: block;
+}
+
+.shelf .shelf__row .row-wall .product::before {
+    content: "data";
+    position: absolute;
+    left: 1.2em;
+    width: 6.5em;
+    height: 9em;
+    background-color: #fff;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 25px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 25px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 25px -2px rgba(0,0,0,0.75);
+    display: none;
+}
+
+
+
+
+.shelf .shelf__row .row-wall .product_1{
+    /* display: none; */
+    max-width: 9.3em;
+    position: relative;
+    /* top: 42%; */
+    z-index: 50;
+    -webkit-box-shadow: 0px 37px 16px -28px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 37px 16px -28px rgba(0,0,0,0.75);
+    box-shadow: 0px 37px 16px -28px rgba(0,0,0,0.75);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.shelf .shelf__row .row-wall .product_1 img {
+    object-fit: cover;
+    max-width: 9.3em;
+    -webkit-box-shadow: 0px 37px 16px -28px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 37px 16px -28px rgba(0,0,0,0.75);
+    box-shadow: 0px 37px 16px -28px rgba(0,0,0,0.75);
+}
+
+.shelf .shelf__row .row-wall .product_1:hover::before{
+    display: block;
+}
+
+.shelf .shelf__row .row-wall .product_1::before {
+    content: "data";
+    position: absolute;
+    left: 1.2em;
+    width: 6.5em;
+    height: 9em;
+    background-color: #fff;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 25px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 25px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 25px -2px rgba(0,0,0,0.75);
+    display: none;
+}
+
+
+
+.shelf .shelf__row .row-wall .product_2 {
+    /* display: none; */
+    max-width: 9.3em;
+    position: relative;
+    /* top: 42%; */
+    z-index: 50;
+    -webkit-box-shadow: 0px 37px 16px -28px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 37px 16px -28px rgba(0,0,0,0.75);
+    box-shadow: 0px 37px 16px -28px rgba(0,0,0,0.75);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.shelf .shelf__row .row-wall .product_2 img {
+    object-fit: cover;
+    max-width: 9.3em;
+    -webkit-box-shadow: 0px 37px 16px -28px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 37px 16px -28px rgba(0,0,0,0.75);
+    box-shadow: 0px 37px 16px -28px rgba(0,0,0,0.75);
+}
+
+.shelf .shelf__row .row-wall .product_2 input:checked ~ .modal{
+    display: block;
+}
+
+.shelf .shelf__row .row-wall .product_2 .modal {
+    position: absolute;
+    left: 1.2em;
+    top: 0;
+    width: 6.5em;
+    height: 9em;
+    background-color: #fff;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 25px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 25px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 25px -2px rgba(0,0,0,0.75);
+    display: none;
+}
+
+.shelf .shelf__row .row-wall .product_2 .modal label {
+    float: right;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .shelf .shelf__row .row-base{
     /* display: none; */
     width: 100%;
@@ -111,22 +263,4 @@
     box-shadow: 0px 8px 21px 1px rgba(0,0,0,0.75);
 }
 
-.modal {
-    display: none;
-    position: fixed;
-    top: 10%;
-    left: 10%;
-    right: 10%;
-    bottom: 10%;
-    border-radius: 15px;
-    background-color: #fff;
-    padding: 1em;
-    z-index: 1000000;
-    -webkit-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.75);
-}
 
-.shelf:hover ~ .modal {
-    display: block !important;
-}
